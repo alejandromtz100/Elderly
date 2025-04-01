@@ -18,7 +18,7 @@ const AdminDashboard: React.FC = () => {
   // Obtener datos del panel de control
   useEffect(() => {
     setLoading(prev => ({ ...prev, dashboard: true }));
-    fetch("http://localhost:4000/api/panel-control")
+    fetch("https://api-elderly.onrender.com/api/panel-control")
       .then((res) => res.json())
       .then((data) => {
         setDashboardData(data);
@@ -33,7 +33,7 @@ const AdminDashboard: React.FC = () => {
   // Obtener lista de usuarios
   useEffect(() => {
     setLoading(prev => ({ ...prev, usuarios: true }));
-    fetch("http://localhost:4000/api/usuarios")
+    fetch("https://api-elderly.onrender.com/api/usuarios")
       .then((res) => res.json())
       .then((data) => {
         setUsuarios(data.usuarios);
@@ -48,7 +48,7 @@ const AdminDashboard: React.FC = () => {
   // Obtener lista de adultos mayores
   useEffect(() => {
     setLoading(prev => ({ ...prev, adultos: true }));
-    fetch("http://localhost:4000/api/adultos")
+    fetch("https://api-elderly.onrender.com/api/adultos")
       .then((res) => res.json())
       .then((data) => {
         setAdultos(data.data);
@@ -66,7 +66,7 @@ const AdminDashboard: React.FC = () => {
     setShowBackupModal(true);
     setBackupMessage({ text: "Generando respaldo...", type: "info" });
 
-    fetch("http://localhost:4000/api/backup")
+    fetch("https://api-elderly.onrender.com/api/backup")
       .then(async (res) => {
         if (!res.ok) throw new Error("Error en la respuesta del servidor");
         
