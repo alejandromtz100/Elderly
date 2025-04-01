@@ -20,7 +20,7 @@ const AdminDashboard: React.FC = () => {
   // Obtener datos del panel de control
   useEffect(() => {
     setLoading(prev => ({ ...prev, dashboard: true }));
-    fetch("http://localhost:4000/api/panel-control")
+    fetch("https://api-elderly.onrender.com/api/panel-control")
       .then((res) => res.json())
       .then((data) => {
         setTimeout(() => {
@@ -37,7 +37,7 @@ const AdminDashboard: React.FC = () => {
   // Obtener lista de usuarios
   useEffect(() => {
     setLoading(prev => ({ ...prev, usuarios: true }));
-    fetch("http://localhost:4000/api/usuarios")
+    fetch("https://api-elderly.onrender.com/api/usuarios")
       .then((res) => res.json())
       .then((data) => {
         setTimeout(() => {
@@ -54,7 +54,7 @@ const AdminDashboard: React.FC = () => {
   // Obtener lista de adultos mayores
   useEffect(() => {
     setLoading(prev => ({ ...prev, adultos: true }));
-    fetch("http://localhost:4000/api/adultos")
+    fetch("https://api-elderly.onrender.com/api/adultos")
       .then((res) => res.json())
       .then((data) => {
         setTimeout(() => {
@@ -85,7 +85,7 @@ const AdminDashboard: React.FC = () => {
     }, 300);
     
     // Llamada real a la API
-    fetch("http://localhost:4000/api/backup")
+    fetch("https://api-elderly.onrender.com/api/backup")
       .then((res) => res.blob())
       .then((blob) => {
         const url = window.URL.createObjectURL(blob);

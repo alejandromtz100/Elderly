@@ -2,6 +2,11 @@ import React from "react";
 import heroImage from "../assets/01.png";
 import cuidadoImage from "../assets/02.png";
 import cuidar from "../assets/04.png";
+import appTelefono from "../assets/03.png";
+import monitoreoIcon from "../assets/monitoreo.png";
+import recordatoriosIcon from "../assets/recordatorios.png";
+import ubicacionIcon from "../assets/ubicacion.png";
+import redIcon from "../assets/red.png";
 import Navbar from "../componentes/Navbar";
 
 const Inicio: React.FC = () => {
@@ -134,7 +139,7 @@ const Inicio: React.FC = () => {
             <div className="lg:w-1/2 flex justify-center mb-8 lg:mb-0">
               <div className="relative">
                 <img
-                  src="src/assets/03.png"
+                  src={appTelefono}
                   alt="App en teléfono"
                   className="max-w-[250px] md:max-w-[300px] lg:max-w-[400px] h-auto transform transition-transform duration-300 hover:scale-105"
                 />
@@ -147,7 +152,7 @@ const Inicio: React.FC = () => {
                 <div className="flex flex-col sm:flex-row items-start p-4 md:p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
                   <div className="w-16 h-16 sm:w-24 sm:h-24 mr-4 sm:mr-6 flex-shrink-0 bg-blue-50 rounded-full flex items-center justify-center">
                     <img
-                      src="src/assets/monitoreo.png"
+                      src={monitoreoIcon}
                       alt="Monitoreo de Salud"
                       className="w-10 h-10 sm:w-16 sm:h-16 object-cover"
                     />
@@ -164,7 +169,7 @@ const Inicio: React.FC = () => {
                 <div className="flex flex-col sm:flex-row items-start p-4 md:p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
                   <div className="w-16 h-16 sm:w-24 sm:h-24 mr-4 sm:mr-6 flex-shrink-0 bg-blue-50 rounded-full flex items-center justify-center">
                     <img
-                      src="src/assets/recordatorios.png"
+                      src={recordatoriosIcon}
                       alt="Recordatorios Personalizados"
                       className="w-10 h-10 sm:w-16 sm:h-16 object-cover"
                     />
@@ -181,7 +186,7 @@ const Inicio: React.FC = () => {
                 <div className="flex flex-col sm:flex-row items-start p-4 md:p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
                   <div className="w-16 h-16 sm:w-24 sm:h-24 mr-4 sm:mr-6 flex-shrink-0 bg-blue-50 rounded-full flex items-center justify-center">
                     <img
-                      src="src/assets/ubicacion.png"
+                      src={ubicacionIcon}
                       alt="Ubicación en Tiempo Real"
                       className="w-10 h-10 sm:w-16 sm:h-16 object-cover"
                     />
@@ -198,7 +203,7 @@ const Inicio: React.FC = () => {
                 <div className="flex flex-col sm:flex-row items-start p-4 md:p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
                   <div className="w-16 h-16 sm:w-24 sm:h-24 mr-4 sm:mr-6 flex-shrink-0 bg-blue-50 rounded-full flex items-center justify-center">
                     <img
-                      src="src/assets/red.png"
+                      src={redIcon}
                       alt="Red de Cuidado"
                       className="w-10 h-10 sm:w-16 sm:h-16 object-cover"
                     />

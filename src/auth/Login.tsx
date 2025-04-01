@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import aversiestesi from '../assets/aversiestesi.png';
+import portada2 from '../assets/portada2.jpg';
 
 export const Login = () => {
   const [usuario, setUsuario] = useState('');
@@ -19,7 +21,7 @@ export const Login = () => {
     // Mostrar carga por 5 segundos
     setTimeout(async () => {
       try {
-        const response = await fetch('http://localhost:4000/api/login', {
+        const response = await fetch('https://api-elderly.onrender.com/api/login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -187,18 +189,17 @@ export const Login = () => {
           )}
           
           <div className="text-center mb-2">
-  <div className="flex items-center justify-center mb-4">
-    {/* Logo con tamaño aumentado y márgenes ajustados */}
-    <img 
-      src="src/assets/aversiestesi.png"  
-      alt="Logo"
-      className="h-25 w-auto -mb-5"  
-      style={{ maxWidth: '140px' }}  
-    />
-  </div>
-  <h2 className="text-2xl font-semibold text-gray-800">Bienvenido</h2>
-  <p className="text-gray-600 mt-2">Inicia sesión para cuidar y conectar</p>
-</div>
+            <div className="flex items-center justify-center mb-4">
+              <img 
+                src={aversiestesi}  
+                alt="Logo"
+                className="h-25 w-auto -mb-5"  
+                style={{ maxWidth: '140px' }}  
+              />
+            </div>
+            <h2 className="text-2xl font-semibold text-gray-800">Bienvenido</h2>
+            <p className="text-gray-600 mt-2">Inicia sesión para cuidar y conectar</p>
+          </div>
           
           {error && (
             <div className="mb-6 p-4 bg-red-50 border-l-4 border-red-500 text-red-700 rounded">
@@ -318,7 +319,7 @@ export const Login = () => {
       {/* Sección de imagen */}
       <div className="hidden md:block md:w-1/2 relative">
         <img 
-          src="src/assets/portada2.jpg"
+          src={portada2}
           alt="Login Background"
           className="absolute inset-0 w-full h-full object-cover"
         />

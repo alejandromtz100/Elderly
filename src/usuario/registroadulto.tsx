@@ -50,7 +50,7 @@ function RegistroAdulto() {
       // Mostrar carga por 5 segundos
       setTimeout(async () => {
         try {
-          const response = await axios.post('http://localhost:4000/api/registrar-adulto', formData);
+          const response = await axios.post('https://api-elderly.onrender.com/api/registrar-adulto', formData);
           
           if (response.data.message) {
             setShowSuccess(true);

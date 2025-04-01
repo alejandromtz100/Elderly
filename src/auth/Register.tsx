@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import aversiestesi from '../assets/aversiestesi.png';
+import portada3 from '../assets/portada3.jpg';
 
 export const Register = () => {
   const [formData, setFormData] = useState({
@@ -44,7 +46,7 @@ export const Register = () => {
     // Mostrar carga por 5 segundos
     setTimeout(async () => {
       try {
-        const response = await fetch('http://localhost:4000/api/register', {
+        const response = await fetch('https://api-elderly.onrender.com/api/register', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -179,7 +181,7 @@ export const Register = () => {
       {/* Sección de imagen primero (lado izquierdo) */}
       <div className="hidden md:block md:w-1/2 relative">
         <img 
-          src="src/assets/portada3.jpg"
+          src={portada3}
           alt="Register Background"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -242,18 +244,17 @@ export const Register = () => {
           )}
           
           <div className="text-center mb-2">
-  <div className="flex items-center justify-center mb-4">
-    {/* Logo con tamaño aumentado y márgenes ajustados */}
-    <img 
-      src="src/assets/aversiestesi.png"  
-      alt="Logo"
-      className="h-25 w-auto -mb-5"  
-      style={{ maxWidth: '140px' }}  
-    />
-  </div>
-  <h2 className="text-2xl font-semibold text-gray-800">Crea tu cuenta</h2>
-  <p className="text-gray-600 mt-2">Únete a nuestra comunidad de cuidado</p>
-</div>
+            <div className="flex items-center justify-center mb-4">
+              <img 
+                src={aversiestesi}  
+                alt="Logo"
+                className="h-25 w-auto -mb-5"  
+                style={{ maxWidth: '140px' }}  
+              />
+            </div>
+            <h2 className="text-2xl font-semibold text-gray-800">Crea tu cuenta</h2>
+            <p className="text-gray-600 mt-2">Únete a nuestra comunidad de cuidado</p>
+          </div>
           
           {error && (
             <div className="mb-6 p-4 bg-red-50 border-l-4 border-red-500 text-red-700 rounded">
